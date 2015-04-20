@@ -61,28 +61,30 @@ If you wish to integrate your containers seamlessly with logspout, you need to m
 - all applications log only to STDOUT and STDERR ([no files](https://github.com/jwilder/dockerize))
 - all containers are running *[without the](https://github.com/gliderlabs/logspout/issues/22) [-t flag](https://github.com/gliderlabs/logspout/pull/78)*
 
-      +-----------------+  +-----------------+  +-----------------+  
-      |    container    |  |    container    |  |    container    |  
-      | +-------------+ |  | +-------------+ |  | +-------------+ |  
-      | | application | |  | | application | |  | | application | |  
-      | +------+------+ |  | +------+------+ |  | +------+------+ |  
-      |  STDOUT|STDERR  |  |  STDOUT|STDERR  |  |  STDOUT|STDERR  |
-      +--------v-----+--+  +-----+--v--------+  +---+----v--------+  
-                     |           |                  |
-      +--------------v-----------v------------------v-------------+  
-      |                                                           |  
-      |                    Logspout container                     |  
-      |                                                           |  
-      +-----------------------------+-----------------------------+  
-                                    |
-                                    |            MY MACHINE
-      +-------------------------------------------------------------+
-                                    |           "THE CLOUD"
-                          +---------v--------+
-                          |                  |
-                          |    ELK stack     |
-                          |                  |
-                          +------------------+
+```
++-----------------+  +-----------------+  +-----------------+  
+|    container    |  |    container    |  |    container    |  
+| +-------------+ |  | +-------------+ |  | +-------------+ |  
+| | application | |  | | application | |  | | application | |  
+| +------+------+ |  | +------+------+ |  | +------+------+ |  
+|  STDOUT|STDERR  |  |  STDOUT|STDERR  |  |  STDOUT|STDERR  |
++--------v-----+--+  +-----+--v--------+  +---+----v--------+  
+               |           |                  |
++--------------v-----------v------------------v-------------+  
+|                                                           |  
+|                    Logspout container                     |  
+|                                                           |
++-----------------------------+-----------------------------+  
+                              |
+                              |            MY MACHINE
++-------------------------------------------------------------+
+                              |           "THE CLOUD"
+                    +---------v--------+
+                    |                  |
+                    |    ELK stack     |
+                    |                  |
+                    +------------------+
+```
 
 How to run the ELK stack
 -------------------------
