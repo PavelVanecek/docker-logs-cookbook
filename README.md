@@ -141,6 +141,3 @@ Verify
 You should now be able to see all logs from all your Docker containers in Kibana dashboards:
 
     http://<elk_container_ip>:9292
-
-More tasks
-----------
