@@ -93,7 +93,7 @@ How to run the ELK stack
 
 The easiest to run is the [`pblittle/docker-logstash`](https://github.com/pblittle/docker-logstash) image. It contains full configurable ELK stack.
 
-The repository [README]((https://github.com/pblittle/docker-logstash) lists a few examples on running logstash. It however does not listen on syslog interface by default, so you have to enable it in configuration file and provide that one.
+The repository [README](https://github.com/pblittle/docker-logstash) lists a few examples on running logstash. It however does not listen on syslog interface by default, so you have to enable it in configuration file and provide that one.
 
     # conf.d/logstash.conf snippet
 
