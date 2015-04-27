@@ -7,6 +7,8 @@ Handling logs from Docker containers
 
 **The solution**: ELK stack.
 
+> This is not the only way. Check out [Alternatives](#alternatives)
+
 ELK stack
 ---------
 
@@ -141,3 +143,10 @@ Verify
 You should now be able to see all logs from all your Docker containers in Kibana dashboards:
 
     http://<elk_container_ip>:9292
+
+Alternatives
+------------
+
+For cloud solution, Papertrail or Loggly might be an option.
+
+If you need to self host your logs solution, check out a [different approach documented by SequenceIQ](http://blog.sequenceiq.com/blog/2014/10/07/hadoop-monitoring/).
