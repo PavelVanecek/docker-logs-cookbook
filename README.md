@@ -150,3 +150,5 @@ Alternatives
 For cloud solution, [Papertrail](papertrailapp.com) or [Loggly](https://www.loggly.com) might be an option.
 
 If you need to self host your logs solution, check out a [different approach documented by SequenceIQ](http://blog.sequenceiq.com/blog/2014/10/07/hadoop-monitoring/).
+
+Another way: Read more about [using fluentd for log management](http://jasonwilder.com/blog/2014/03/17/docker-log-management-using-fluentd/).
